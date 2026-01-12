@@ -1,0 +1,18 @@
+{
+  "name": "notepad-lite",
+  "version": "1.0.0",
+  "description": "A simple notepad app with raw and markdown view, sharing, and persistent storage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["notepad", "markdown", "code-editor"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "marked": "^11.1.1",
+    "uuid": "^9.0.1"
+  }
+}

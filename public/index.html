@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad Lite - Simple Note Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Notepad Lite</h1>
+            <div class="header-actions">
+                <button id="newNoteBtn" class="btn btn-secondary" title="Create new note">
+                    <span>➕</span> New Note
+                </button>
+                <button id="shareBtn" class="btn btn-primary" title="Share this note">
+                    <span>🔗</span> Share
+                </button>
+                <button id="deleteBtn" class="btn btn-danger" title="Delete this note">
+                    <span>🗑️</span> Delete
+                </button>
+            </div>
+        </header>
+
+        <div class="toolbar">
+            <div class="view-toggle">
+                <button id="rawViewBtn" class="toggle-btn active">Raw</button>
+                <button id="markdownViewBtn" class="toggle-btn">Markdown</button>
+            </div>
+            <div class="status">
+                <span id="statusText">Ready</span>
+            </div>
+        </div>
+
+        <div class="editor-container">
+            <textarea id="editor" placeholder="Start typing... Your notes are automatically saved."></textarea>
+            <div id="preview" class="preview hidden"></div>
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Share this note</h2>
+            <p>Copy this link to share your note:</p>
+            <div class="share-link-container">
+                <input type="text" id="shareLinkInput" readonly>
+                <button id="copyLinkBtn" class="btn btn-primary">Copy</button>
+            </div>
+            <button id="closeModalBtn" class="btn btn-secondary">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
